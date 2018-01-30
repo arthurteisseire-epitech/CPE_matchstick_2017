@@ -11,12 +11,16 @@ INC	=	$(realpath include)
 DLIB	=	$(realpath lib/my)/
 LIB	=	my
 LIBS	=	-L$(DLIB) -l$(LIB)
+DINIT	=	$(DSRC)init/
+DESTROY	=	$(DSRC)destroy/
+DINIT	=	$(DSRC)init/
+DPRINT	=	$(DSRC)print_map/
 SRC     =	$(DSRC)main.c \
 		$(DSRC)get_next_line.c \
-		$(DSRC)print_extrem_line.c \
-		$(DSRC)create_map.c \
-		$(DSRC)print_map.c \
-		$(DSRC)free_map.c
+		$(DINIT)init_map.c \
+		$(DPRINT)print_extrem_line.c \
+		$(DPRINT)print_map.c \
+		$(DESTROY)free_map.c
 CFLAGS	+=	-Wall -W -Wextra -I$(INC)
 OBJ	=	$(SRC:.c=.o)
 NAME	=	matchstick
