@@ -12,7 +12,8 @@ DLIB	=	$(realpath lib/my)/
 LIB	=	my
 LIBS	=	-L$(DLIB) -l$(LIB)
 SRC     =	$(DSRC)main.c \
-		$(DSRC)get_next_line.c
+		$(DSRC)get_next_line.c \
+		$(DSRC)print_extrem_line.c
 CFLAGS	+=	-Wall -W -Wextra -I$(INC)
 OBJ	=	$(SRC:.c=.o)
 NAME	=	matchstick

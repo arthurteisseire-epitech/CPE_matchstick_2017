@@ -5,6 +5,7 @@
 ** by Arthur Teisseire
 */
 
+#include "my.h"
 #include "matchstick.h"
 
 int print_extrem_line(int nb_row)
