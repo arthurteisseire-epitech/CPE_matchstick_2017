@@ -14,6 +14,14 @@ typedef struct line {
 	int nb_stick;
 } line_t;
 
+typedef struct map {
+	line_t *line;
+	int nb_row;
+	int len_line;
+} map_t;
+
 void print_extrem_line(int nb_row);
+int init_map(map_t *map);
+int set_map_line(map_t *map, int i);
 
 #endif
