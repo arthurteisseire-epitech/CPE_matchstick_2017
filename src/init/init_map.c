@@ -32,7 +32,7 @@ int set_map_line(map_t *map, int i)
 	int j = 0;
 	int nb_spaces = map->nb_row - (i + 1);
 
-	map->line[i].str = malloc(sizeof(char) * (map->len_line + 1));
+	map->line[i].str = malloc(sizeof(char) * (map->len_line + 2));
 	if (map->line[i].str == NULL)
 		return (-1);
 	map->line[i].str[map->len_line] = '\0';
@@ -42,6 +42,7 @@ int set_map_line(map_t *map, int i)
 	put_sticks(&(map->line[i]), &j);
 	put_spaces(map->line[i].str, &j, nb_spaces);
 	map->line[i].str[j] = '*';
+	map->line[i].str[j + 1] = '\n';
 	return (0);
 }
 
