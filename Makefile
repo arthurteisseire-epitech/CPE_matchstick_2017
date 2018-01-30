@@ -15,7 +15,8 @@ SRC     =	$(DSRC)main.c \
 		$(DSRC)get_next_line.c \
 		$(DSRC)print_extrem_line.c \
 		$(DSRC)create_map.c \
-		$(DSRC)print_map.c
+		$(DSRC)print_map.c \
+		$(DSRC)free_map.c
 CFLAGS	+=	-Wall -W -Wextra -I$(INC) -ggdb3
 OBJ	=	$(SRC:.c=.o)
 NAME	=	matchstick

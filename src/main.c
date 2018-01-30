@@ -29,5 +29,6 @@ int main(int ac, char **av)
 	print_extrem_line(map.nb_row);
 	print_map(&map);
 	print_extrem_line(map.nb_row);
+	free_map(&map);
 	return (0);
 }

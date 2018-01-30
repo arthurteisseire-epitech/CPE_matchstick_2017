@@ -29,5 +29,6 @@ int set_map_line(map_t *map, int i);
 void put_sticks(line_t *line, int *j);
 void put_spaces(char *str, int *j, int nb_spaces);
 void print_map(map_t *map);
+void free_map(map_t *map);
 
 #endif
