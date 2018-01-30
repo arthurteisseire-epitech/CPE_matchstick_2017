@@ -31,7 +31,7 @@ void put_sticks(line_t *line, int *j);
 void put_spaces(char *str, int *j, int nb_spaces);
 void print_map(map_t *map);
 void free_map(map_t *map);
-int count_sticks(int nb_row);
+int count_sticks(map_t *map);
 int run_game(map_t *map);
 int remove_sticks(map_t *map, int index_line, int nb_sticks);
 

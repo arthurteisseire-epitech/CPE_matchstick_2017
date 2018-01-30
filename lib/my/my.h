@@ -17,5 +17,7 @@ int my_strlen(char *str);
 int my_atoi(char *str);
 char *my_strcpy(char *dest, char const *src);
 int my_str_isnum(char *str);
+void my_putchar(char c);
+int my_put_nbr(int nb);
 
 #endif

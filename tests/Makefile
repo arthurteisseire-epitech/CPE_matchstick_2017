@@ -13,7 +13,6 @@ DSRC	=	$(ROOT)src/
 INC	=	$(ROOT)include/
 LIB	=	my
 LIBS	=	-L$(DLIB) -l$(LIB)
-DTOOLS	=	$(DSRC)tools/
 
 SRC_UT	=	$(DSRC_UT)test_lines.c
 SRC	=	$(DSRC)get_next_line.c

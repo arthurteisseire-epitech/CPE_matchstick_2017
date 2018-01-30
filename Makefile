@@ -25,7 +25,7 @@ SRC     =	$(DSRC)main.c \
 		$(DESTROY)free_map.c \
 		$(DERR)check_args.c \
 		$(DRUN)run_game.c
-CFLAGS	+=	-Wall -W -Wextra -I$(INC)
+CFLAGS	+=	-Wall -W -Wextra -I$(INC) -ggdb3
 OBJ	=	$(SRC:.c=.o)
 NAME	=	matchstick
 
