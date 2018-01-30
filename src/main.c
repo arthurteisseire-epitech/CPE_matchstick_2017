@@ -26,9 +26,9 @@ int main(int ac, char **av)
 	map.max_sticks = my_atoi(av[2]);
 	map.len_line = map.nb_row * 2 + 1;
 	init_map(&map);
-	print_extrem_line(map.nb_row);
+	print_extrem_line(map.len_line);
 	print_map(&map);
-	print_extrem_line(map.nb_row);
+	print_extrem_line(map.len_line);
 	free_map(&map);
 	return (0);
 }

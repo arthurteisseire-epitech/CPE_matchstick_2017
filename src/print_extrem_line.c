@@ -8,14 +8,13 @@
 #include "my.h"
 #include "matchstick.h"
 
-void print_extrem_line(int nb_row)
+void print_extrem_line(int len_line)
 {
-	int nb_stars = nb_row * 2 + 1;
-	char buffer[nb_stars + 2];
+	char buffer[len_line + 2];
 
-	buffer[nb_stars] = '\n';
-	buffer[nb_stars + 1] = '\0';
-	for (int i = 0; i < nb_stars; i++)
+	buffer[len_line] = '\n';
+	buffer[len_line + 1] = '\0';
+	for (int i = 0; i < len_line; i++)
 		buffer[i] = '*';
 	my_putstr(buffer);
 }
