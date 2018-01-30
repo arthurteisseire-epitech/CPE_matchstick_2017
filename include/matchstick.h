@@ -22,6 +22,8 @@ typedef struct map {
 	int len_line;
 	int max_sticks;
 	int nb_sticks;
+	int line_in;
+	int stick_in;
 } map_t;
 
 void print_extrem_line(int nb_row);
@@ -33,6 +35,10 @@ void print_map(map_t *map);
 void free_map(map_t *map);
 int count_sticks(map_t *map);
 int run_game(map_t *map);
-int remove_sticks(map_t *map, int index_line, int nb_sticks);
+int remove_sticks(map_t *map);
+int player_io(map_t *map);
+int input(map_t *map, int (*f)(map_t *map, char *input), char *ouput);
+int stick_errors(map_t *map, char *input);
+int line_errors(map_t *map, char *input);
 
 #endif
