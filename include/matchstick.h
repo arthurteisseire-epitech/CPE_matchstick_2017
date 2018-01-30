@@ -8,6 +8,10 @@
 #ifndef MATCHSTICK_H
 #define MATCHSTICK_H
 
-
+typedef struct line {
+	char *str;
+	char *last_stick;
+	int nb_stick;
+} line_t;
 
 #endif
