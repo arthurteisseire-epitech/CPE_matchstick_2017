@@ -24,7 +24,7 @@ typedef struct map {
 } map_t;
 
 void print_extrem_line(int nb_row);
-int init_map(map_t *map);
+int init_map(map_t *map, char **args);
 int set_map_line(map_t *map, int i);
 void put_sticks(line_t *line, int *j);
 void put_spaces(char *str, int *j, int nb_spaces);

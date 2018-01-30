@@ -21,10 +21,7 @@ int main(int ac, char **av)
 		my_puterror("Invalid arguments\n");
 		return (84);
 	}
-	map.nb_row = my_atoi(av[1]);
-	map.max_sticks = my_atoi(av[2]);
-	map.len_line = map.nb_row * 2 + 1;
-	init_map(&map);
+	init_map(&map, &av[1]);
 	print_map(&map);
 	free_map(&map);
 	return (0);

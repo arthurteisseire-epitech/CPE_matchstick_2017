@@ -5,12 +5,16 @@
 ** by Arthur Teisseire
 */
 
+#include "my.h"
 #include "matchstick.h"
 
-int init_map(map_t *map)
+int init_map(map_t *map, char **args)
 {
 	int i = 0;
 
+	map->nb_row = my_atoi(args[0]);
+	map->max_sticks = my_atoi(args[1]);
+	map->len_line = map->nb_row * 2 + 1;
 	map->line = malloc(sizeof(line_t) * map->nb_row);
 	if (map->line == NULL)
 		return (-1);
