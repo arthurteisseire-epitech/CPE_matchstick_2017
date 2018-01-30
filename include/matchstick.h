@@ -8,20 +8,26 @@
 #ifndef MATCHSTICK_H
 #define MATCHSTICK_H
 
+#include <stdlib.h>
+
 typedef struct line {
 	char *str;
 	char *last_stick;
-	int nb_stick;
+	int nb_sticks;
 } line_t;
 
 typedef struct map {
 	line_t *line;
 	int nb_row;
 	int len_line;
+	int max_sticks;
 } map_t;
 
 void print_extrem_line(int nb_row);
 int init_map(map_t *map);
 int set_map_line(map_t *map, int i);
+void put_sticks(line_t *line, int *j);
+void put_spaces(char *str, int *j, int nb_spaces);
+void print_map(map_t *map);
 
 #endif
