@@ -7,6 +7,7 @@
 
 #include "my.h"
 #include "matchstick.h"
+#include "error_handling.h"
 
 int main(int ac, char **av)
 {
@@ -16,19 +17,15 @@ int main(int ac, char **av)
 		my_puterror("The program takes exactly 2 arguments\n");
 		return (84);
 	}
-	/*
-	 *if (check_args(&av[1]) == -1) {
-	 *        my_puterror("Invalid arguments\n");
-	 *        return (84);
-	 *}
-	 */
+	if (check_args(&av[1]) == -1) {
+		my_puterror("Invalid arguments\n");
+		return (84);
+	}
 	map.nb_row = my_atoi(av[1]);
 	map.max_sticks = my_atoi(av[2]);
 	map.len_line = map.nb_row * 2 + 1;
 	init_map(&map);
-	print_extrem_line(map.len_line);
 	print_map(&map);
-	print_extrem_line(map.len_line);
 	free_map(&map);
 	return (0);
 }

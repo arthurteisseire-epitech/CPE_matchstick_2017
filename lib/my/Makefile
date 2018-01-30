@@ -4,7 +4,8 @@ SRC	=	my_putchar.c \
 		my_puterror.c \
 		my_strlen.c \
 		my_atoi.c \
-		my_strcpy.c
+		my_strcpy.c \
+		my_str_isnum.c
 OBJ	=	$(SRC:.c=.o)
 NAME	=	libmy.a
 

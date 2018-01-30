@@ -16,5 +16,6 @@ void my_putstr(char *str);
 int my_strlen(char *str);
 int my_atoi(char *str);
 char *my_strcpy(char *dest, char const *src);
+int my_str_isnum(char *str);
 
 #endif
