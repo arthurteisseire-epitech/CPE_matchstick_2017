@@ -27,8 +27,11 @@ int input(map_t *map, int (*f)(map_t *map, char *input), char *output)
 	input = get_next_line(0);
 	if (input == NULL)
 		return (-1);
-	if (f(map, input) == -1)
+	if (f(map, input) == -1) {
+		free(input);
 		return (-1);
+	}
+	free(input);
 	return (0);
 }
 
