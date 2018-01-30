@@ -28,7 +28,7 @@ int run_game(map_t *map)
 		nb_sticks = my_atoi(removed_sticks);
 		if (remove_sticks(map, index_line - 1, nb_sticks) == 0) {
 			map->nb_sticks -= nb_sticks;
-			map->line[index_line].nb_sticks -= nb_sticks;
+			map->line[index_line - 1].nb_sticks -= nb_sticks;
 		}
 	}
 	my_putstr("You Won\n");
@@ -39,9 +39,11 @@ int remove_sticks(map_t *map, int index_line, int nb_sticks)
 {
 	int i = 0;
 
+	if (index_line < 0 || index_line > map->nb_row)
+		return (-1);
 	if (nb_sticks > map->line[index_line].nb_sticks)
 		return (-1);
-	else if (nb_sticks > map->max_sticks || nb_sticks <= 0)
+	if (nb_sticks > map->max_sticks || nb_sticks <= 0)
 		return (-1);
 	while (i < nb_sticks) {
 		map->line[index_line].last_stick[0] = ' ';
