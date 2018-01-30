@@ -12,6 +12,7 @@ int init_map(map_t *map, char **args)
 {
 	int i = 0;
 
+	map->nb_sticks = count_sticks(map->nb_row);
 	map->nb_row = my_atoi(args[0]);
 	map->max_sticks = my_atoi(args[1]);
 	map->len_line = map->nb_row * 2 + 1;
@@ -65,4 +66,16 @@ void put_sticks(line_t *line, int *j)
 		(*j)++;
 	}
 	line->last_stick = &(line->str[(*j) - 1]);
+}
+
+int count_sticks(int nb_row)
+{
+	int nb_sticks = 0;
+	int i = 0;
+
+	while (i < nb_row) {
+		nb_sticks += 2 * i + 1;
+		i++;
+	}
+	return (nb_sticks);
 }

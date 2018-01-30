@@ -22,7 +22,7 @@ int main(int ac, char **av)
 		return (84);
 	}
 	init_map(&map, &av[1]);
-	print_map(&map);
+	run_game(&map);
 	free_map(&map);
 	return (0);
 }

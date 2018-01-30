@@ -16,13 +16,15 @@ DESTROY	=	$(DSRC)destroy/
 DINIT	=	$(DSRC)init/
 DPRINT	=	$(DSRC)print_map/
 DERR	=	$(DSRC)error_handling/
+DRUN	=	$(DSRC)run/
 SRC     =	$(DSRC)main.c \
 		$(DSRC)get_next_line.c \
 		$(DINIT)init_map.c \
 		$(DPRINT)print_extrem_line.c \
 		$(DPRINT)print_map.c \
 		$(DESTROY)free_map.c \
-		$(DERR)check_args.c
+		$(DERR)check_args.c \
+		$(DRUN)run_game.c
 CFLAGS	+=	-Wall -W -Wextra -I$(INC)
 OBJ	=	$(SRC:.c=.o)
 NAME	=	matchstick
