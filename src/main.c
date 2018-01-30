@@ -9,6 +9,6 @@
 
 int main(void)
 {
-	print_extrem_line(2);
+	print_extrem_line(4);
 	return (0);
 }

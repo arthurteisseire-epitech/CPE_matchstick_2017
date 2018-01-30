@@ -14,6 +14,6 @@ typedef struct line {
 	int nb_stick;
 } line_t;
 
-int print_extrem_line(int nb_row);
+void print_extrem_line(int nb_row);
 
 #endif
