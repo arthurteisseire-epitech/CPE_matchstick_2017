@@ -60,4 +60,5 @@ void put_sticks(line_t *line, int *j)
 		i++;
 		(*j)++;
 	}
+	line->last_stick = &(line->str[(*j) - 1]);
 }
