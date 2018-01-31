@@ -22,7 +22,8 @@ int run_game(map_t *map)
 		print_map(map);
 		ia_output(map);
 		if (map->nb_sticks == 0) {
-			my_putstr("I lost... snif... but I'll get you next time!!\n");
+			my_putstr("I lost... snif... but "
+			"I'll get you next time!!\n");
 			return (1);
 		}
 	}

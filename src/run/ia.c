@@ -43,8 +43,8 @@ int get_ai_sticks(map_t *map, int line)
 {
 	if (map->line[line - 1].nb_sticks > map->max_sticks)
 		return (map->max_sticks);
-	else if (map->line[line - 1].nb_sticks == map->max_sticks)
-		return (map->line[line - 1].nb_sticks - 1);
-	else
+	else if (map->line[line - 1].nb_sticks == 1)
 		return (1);
+	else
+		return (map->line[line - 1].nb_sticks - 1);
 }
