@@ -30,7 +30,7 @@ void print_ai_info(int sticks, int line)
 
 int get_ai_line(map_t *map)
 {
-	int line;
+	int line = 0;
 	int i = 0;
 	int max = map->line[0].nb_sticks;
 

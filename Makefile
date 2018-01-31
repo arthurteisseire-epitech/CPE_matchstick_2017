@@ -28,7 +28,7 @@ SRC     =	$(DSRC)main.c \
 		$(DRUN)run_game.c \
 		$(DRUN)player_io.c \
 		$(DRUN)ai.c
-CFLAGS	+=	-Wall -W -Wextra -I$(INC) -ggdb3
+CFLAGS	+=	-Wall -W -Wextra -I$(INC)
 OBJ	=	$(SRC:.c=.o)
 NAME	=	matchstick
 
