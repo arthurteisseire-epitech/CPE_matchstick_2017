@@ -24,6 +24,7 @@ SRC     =	$(DSRC)main.c \
 		$(DPRINT)print_map.c \
 		$(DESTROY)free_map.c \
 		$(DERR)check_args.c \
+		$(DERR)input_errors.c \
 		$(DRUN)run_game.c \
 		$(DRUN)player_io.c
 CFLAGS	+=	-Wall -W -Wextra -I$(INC) -ggdb3
