@@ -21,6 +21,7 @@ int player_io(map_t *map)
 		if (status == -2)
 			return (-1);
 	}
+	remove_sticks(map);
 	return (0);
 }
 

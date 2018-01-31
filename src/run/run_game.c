@@ -15,10 +15,6 @@ int run_game(map_t *map)
 		print_map(map);
 		if (player_io(map) == -1)
 			return (0);
-		if (remove_sticks(map) == 0) {
-			map->nb_sticks -= map->stick_in;
-			map->line[map->line_in - 1].nb_sticks -= map->stick_in;
-		}
 	}
 	my_putstr("You Won\n");
 	return (0);
@@ -33,5 +29,7 @@ int remove_sticks(map_t *map)
 		map->line[map->line_in - 1].last_stick -= 1;
 		i++;
 	}
+	map->nb_sticks -= map->stick_in;
+	map->line[map->line_in - 1].nb_sticks -= map->stick_in;
 	return (0);
 }
