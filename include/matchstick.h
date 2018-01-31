@@ -9,6 +9,7 @@
 #define MATCHSTICK_H
 
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct line {
 	char *str;

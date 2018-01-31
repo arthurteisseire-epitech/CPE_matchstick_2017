@@ -10,10 +10,12 @@
 
 int ia_output(map_t *map)
 {
+	time_t ref_time = time(NULL);
 	int line = 0;
 	int sticks = 0;
 
 	my_putstr("\nAI's turn...\n");
+	while (time(NULL) < ref_time + 2) {}
 	my_putstr("AI removed ");
 	my_put_nbr(sticks);
 	my_putstr(" match(es) from line ");
