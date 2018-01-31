@@ -8,7 +8,7 @@
 #include "my.h"
 #include "matchstick.h"
 
-int ia_output(map_t *map)
+int ai_output(map_t *map)
 {
 	int line = get_ai_line(map);
 	int sticks = get_ai_sticks(map, line);
