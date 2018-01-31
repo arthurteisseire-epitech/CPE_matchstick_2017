@@ -13,14 +13,19 @@ int ai_output(map_t *map)
 	int line = get_ai_line(map);
 	int sticks = get_ai_sticks(map, line);
 
+	print_ai_info(sticks, line);
+	remove_sticks(map, sticks, line);
+	return (0);
+}
+
+void print_ai_info(int sticks, int line)
+{
 	my_putstr("\nAI's turn...\n");
 	my_putstr("AI removed ");
 	my_put_nbr(sticks);
 	my_putstr(" match(es) from line ");
 	my_put_nbr(line);
 	my_putchar('\n');
-	remove_sticks(map, sticks, line);
-	return (0);
 }
 
 int get_ai_line(map_t *map)

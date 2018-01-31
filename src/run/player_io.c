@@ -22,7 +22,7 @@ int player_io(map_t *map)
 			return (-1);
 	}
 	remove_sticks(map, map->stick_in, map->line_in);
-	print_info(map);
+	print_player_info(map);
 	return (0);
 }
 
@@ -42,7 +42,7 @@ int input(map_t *map, int (*f)(map_t *map, char *input), char *output)
 	return (0);
 }
 
-void print_info(map_t *map)
+void print_player_info(map_t *map)
 {
 	my_putstr("Player removed ");
 	my_put_nbr(map->stick_in);
