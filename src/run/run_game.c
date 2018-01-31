@@ -11,16 +11,17 @@
 
 int run_game(map_t *map)
 {
+	print_map(map);
 	while (1) {
-		print_map(map);
 		if (player_io(map) == -1)
 			return (0);
+		print_map(map);
 		if (map->nb_sticks == 0) {
 			my_putstr("You lost, too bad...\n");
 			return (2);
 		}
-		print_map(map);
 		ai_output(map);
+		print_map(map);
 		if (map->nb_sticks == 0) {
 			my_putstr("I lost... snif... but "
 			"I'll get you next time!!\n");
