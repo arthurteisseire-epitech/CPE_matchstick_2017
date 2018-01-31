@@ -13,7 +13,8 @@ int run_game(map_t *map)
 {
 	while (map->nb_sticks > 0) {
 		print_map(map);
-		player_io(map);
+		if (player_io(map) == -1)
+			return (0);
 		if (remove_sticks(map) == 0) {
 			map->nb_sticks -= map->stick_in;
 			map->line[map->line_in - 1].nb_sticks -= map->stick_in;

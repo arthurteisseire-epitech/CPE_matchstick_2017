@@ -11,11 +11,16 @@
 
 int player_io(map_t *map)
 {
+	int status;
+
 	map->line_in = 0;
 	map->stick_in = 0;
 	my_putstr("\nYour turn:\n");
-	while (input(map, line_errors, "Line: ") == -1 ||
-		input(map, stick_errors, "Matches: ") == -1) {}
+	while ((status = input(map, line_errors, "Line: ")) != 0 ||
+	(status = input(map, stick_errors, "Matches: ")) != 0) {
+		if (status == -2)
+			return (-1);
+	}
 	return (0);
 }
 
@@ -26,7 +31,7 @@ int input(map_t *map, int (*f)(map_t *map, char *input), char *output)
 	my_putstr(output);
 	input = get_next_line(0);
 	if (input == NULL)
-		return (-1);
+		return (-2);
 	if (f(map, input) == -1) {
 		free(input);
 		return (-1);
