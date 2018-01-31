@@ -12,6 +12,7 @@
 int main(int ac, char **av)
 {
 	map_t map;
+	int winner;
 
 	if (ac != 3) {
 		my_puterror("The program takes exactly 2 arguments\n");
@@ -22,7 +23,7 @@ int main(int ac, char **av)
 		return (84);
 	}
 	init_map(&map, &av[1]);
-	run_game(&map);
+	winner = run_game(&map);
 	free_map(&map);
-	return (0);
+	return (winner);
 }
