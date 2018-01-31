@@ -41,5 +41,6 @@ int input(map_t *map, int (*f)(map_t *map, char *input), char *ouput);
 int stick_errors(map_t *map, char *input);
 int line_errors(map_t *map, char *input);
 void print_info(map_t *map);
+int ia_output(map_t *map);
 
 #endif

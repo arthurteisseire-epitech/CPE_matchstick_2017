@@ -15,6 +15,8 @@ int run_game(map_t *map)
 		print_map(map);
 		if (player_io(map) == -1)
 			return (0);
+		print_map(map);
+		ia_output(map);
 	}
 	my_putstr("You Won\n");
 	return (0);
