@@ -18,4 +18,3 @@ void print_extrem_line(int len_line)
 		buffer[i] = '*';
 	my_putstr(buffer);
 }
-
