@@ -11,8 +11,12 @@
 int stick_errors(map_t *map, char *input)
 {
 	map->stick_in = my_atoi(input);
-	if (!my_str_isnum(input) || map->stick_in <= 0) {
+	if (!my_str_isnum(input)) {
 		my_putstr("Error: invalid input (positive number expected)\n");
+		return (-1);
+	}
+	if (map->stick_in == 0) {
+		my_putstr("Error: you have to remove at least one match\n");
 		return (-1);
 	}
 	if (map->stick_in > map->max_sticks) {
