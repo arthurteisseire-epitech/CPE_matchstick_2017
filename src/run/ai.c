@@ -8,31 +8,6 @@
 #include "my.h"
 #include "matchstick.h"
 
-int ai_output(map_t *map)
-{
-	int line;
-	int sticks;
-
-	if (set_line_and_sticks(map, &line, &sticks) == -1) {
-		line = 0;
-		line = next_valid_line(map, line);
-		sticks = 1;
-	}
-	print_ai_info(sticks, line + 1);
-	remove_sticks(map, sticks, line + 1);
-	return (0);
-}
-
-void print_ai_info(int sticks, int line)
-{
-	my_putstr("\nAI's turn...\n");
-	my_putstr("AI removed ");
-	my_put_nbr(sticks);
-	my_putstr(" match(es) from line ");
-	my_put_nbr(line);
-	my_putchar('\n');
-}
-
 int set_line_and_sticks(map_t *map, int *line, int *sticks)
 {
 	*sticks = 1;
