@@ -13,7 +13,8 @@ int ai_output(map_t *map)
 	int line;
 	int sticks;
 
-	if (set_line_and_sticks(map, &line, &sticks) == -1) {
+	if (can_win(map, &line, &sticks) == 0) {
+	} else if (set_line_and_sticks(map, &line, &sticks) == -1) {
 		line = next_valid_line(map, 0);
 		sticks = 1;
 	}
