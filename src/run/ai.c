@@ -11,8 +11,7 @@
 int set_line_and_sticks(map_t *map, int *line, int *sticks)
 {
 	*sticks = 1;
-
-	while (*sticks < map->max_sticks + 1 && *sticks < map->len_line - 3) {
+	while (*sticks <= map->max_sticks && *sticks <= map->len_line - 3) {
 		if ((*line = check_each_line(map, *sticks)) != -1)
 			return (0);
 		(*sticks)++;
@@ -38,7 +37,9 @@ int good_move(map_t *map, int line, int sticks)
 	int binary = 0;
 
 	while (i < map->nb_row) {
-		if (i == line && map->line[i].nb_sticks - sticks >= 0)
+		if (i == line && map->line[i].nb_sticks - sticks < 0)
+			return (-1);
+		if (i == line)
 			binary ^= map->line[i].nb_sticks - sticks;
 		else
 			binary ^= map->line[i].nb_sticks;
