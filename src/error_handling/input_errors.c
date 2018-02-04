@@ -26,7 +26,7 @@ int stick_errors(map_t *map, char *input)
 		return (-1);
 	}
 	if (map->stick_in > map->line[map->line_in - 1].nb_sticks) {
-		my_puterror("Error: not enough matches on this line\n");
+		my_putstr("Error: not enough matches on this line\n");
 		return (-1);
 	}
 	return (0);
