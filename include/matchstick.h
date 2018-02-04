@@ -54,5 +54,6 @@ int can_win(map_t *map, int *line, int *sticks);
 int all_empty_except_one(map_t *map);
 int count_valid_line(map_t *map);
 int set_nb_sticks(map_t *map, int line, int *sticks, int nb_valid);
+int first_one_stick_line(map_t *map);
 
 #endif

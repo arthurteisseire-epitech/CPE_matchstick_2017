@@ -18,11 +18,29 @@ int can_win(map_t *map, int *line, int *sticks)
 		*sticks = map->line[f_valid].nb_sticks - 1;
 		return (0);
 	}
-	if ((*line = all_empty_except_one(map)) != -1)
+	if ((*line = all_empty_except_one(map)) != -1) {
+		if (map->line[*line].nb_sticks == map->max_sticks + 1) {
+			*line = first_one_stick_line(map);
+			*sticks = 1;
+			return (0);
+		}
 		if (map->line[*line].nb_sticks <= map->max_sticks) {
 			set_nb_sticks(map, *line, sticks, nb_valid);
 			return (0);
 		}
+	}
+	return (-1);
+}
+
+int first_one_stick_line(map_t *map)
+{
+	int line = 0;
+
+	while ((line = next_valid_line(map, line)) != -1) {
+		if (map->line[line].nb_sticks == 1)
+			return (line);
+		line++;
+	}
 	return (-1);
 }
 
