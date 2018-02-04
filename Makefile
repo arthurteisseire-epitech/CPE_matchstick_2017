@@ -31,7 +31,7 @@ SRC     =	$(DSRC)main.c \
 		$(DRUN)ai_output.c \
 		$(DRUN)can_win.c \
 
-CFLAGS	+=	-Wall -W -Wextra -I$(INC)
+CFLAGS	+=	-Wall -W -Wextra -I$(INC) -g
 OBJ	=	$(SRC:.c=.o)
 NAME	=	matchstick
 
