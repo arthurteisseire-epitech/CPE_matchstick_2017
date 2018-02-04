@@ -18,18 +18,19 @@ int can_win(map_t *map, int *line, int *sticks)
 		*sticks = map->line[f_valid].nb_sticks - 1;
 		return (0);
 	}
-	if ((*line = all_empty_except_one(map)) != -1) {
-		my_put_nbr(*line);
-		my_put_nbr(nb_valid);
-		if (map->line[*line].nb_sticks <= map->max_sticks) {
-			if (nb_valid % 2 == 0)
-				*sticks = map->line[*line].nb_sticks;
-			else
-				*sticks = map->line[*line].nb_sticks - 1;
-			return (0);
-		}
-	}
+	if ((*line = all_empty_except_one(map)) != -1)
+		if (map->line[*line].nb_sticks <= map->max_sticks)
+			delete_remain_sticks(map, *line, sticks, nb_valid);
 	return (-1);
+}
+
+int set_nb_sticks(map_t *map, int line, int *sticks, int nb_valid)
+{
+	if (nb_valid % 2 == 0)
+		*sticks = map->line[line].nb_sticks;
+	else
+		*sticks = map->line[line].nb_sticks - 1;
+	return (0);
 }
 
 int all_empty_except_one(map_t *map)
