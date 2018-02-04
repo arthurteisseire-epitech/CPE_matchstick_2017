@@ -19,8 +19,10 @@ int can_win(map_t *map, int *line, int *sticks)
 		return (0);
 	}
 	if ((*line = all_empty_except_one(map)) != -1)
-		if (map->line[*line].nb_sticks <= map->max_sticks)
-			delete_remain_sticks(map, *line, sticks, nb_valid);
+		if (map->line[*line].nb_sticks <= map->max_sticks) {
+			set_nb_sticks(map, *line, sticks, nb_valid);
+			return (0);
+		}
 	return (-1);
 }
 
