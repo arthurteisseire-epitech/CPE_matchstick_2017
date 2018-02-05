@@ -29,7 +29,7 @@ SRC     =	$(DSRC)main.c \
 		$(DRUN)player_io.c \
 		$(DRUN)ai.c \
 		$(DRUN)ai_output.c \
-		$(DRUN)can_win.c \
+		$(DRUN)ai_can_win.c \
 		$(DRUN)ai_tools.c
 
 CFLAGS	+=	-Wall -W -Wextra -I$(INC) -g
