@@ -5,8 +5,8 @@
 ** by Arthur Teisseire
 */
 
-#include "my.h"
 #include "matchstick.h"
+#include "ai.h"
 
 int can_win(map_t *map, int *line, int *sticks)
 {

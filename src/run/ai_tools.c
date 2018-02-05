@@ -7,6 +7,7 @@
 
 #include "my.h"
 #include "matchstick.h"
+#include "ai.h"
 
 int first_one_stick_line(map_t *map)
 {

@@ -30,7 +30,7 @@ SRC     =	$(DSRC)main.c \
 		$(DRUN)ai.c \
 		$(DRUN)ai_output.c \
 		$(DRUN)can_win.c \
-		$(DRUN)tools.c
+		$(DRUN)ai_tools.c
 
 CFLAGS	+=	-Wall -W -Wextra -I$(INC) -g
 OBJ	=	$(SRC:.c=.o)

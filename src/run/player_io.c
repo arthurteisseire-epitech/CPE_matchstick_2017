@@ -7,6 +7,7 @@
 
 #include "my.h"
 #include "matchstick.h"
+#include "player.h"
 #include "get_next_line.h"
 
 int player_io(map_t *map)

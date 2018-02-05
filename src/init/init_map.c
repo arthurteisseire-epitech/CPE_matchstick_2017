@@ -5,6 +5,7 @@
 ** by Arthur Teisseire
 */
 
+#include <stdlib.h>
 #include "my.h"
 #include "matchstick.h"
 

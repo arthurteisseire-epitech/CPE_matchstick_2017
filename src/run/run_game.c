@@ -5,9 +5,11 @@
 ** by Arthur Teisseire
 */
 
+#include "my.h"
 #include "matchstick.h"
 #include "get_next_line.h"
-#include "my.h"
+#include "player.h"
+#include "ai.h"
 
 int run_game(map_t *map)
 {

@@ -5,6 +5,7 @@
 ** by Arthur Teisseire
 */
 
+#include <stdlib.h>
 #include "matchstick.h"
 
 void free_map(map_t *map)
