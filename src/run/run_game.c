@@ -36,11 +36,11 @@ int remove_sticks(map_t *map, int nb_sticks, int index_line)
 	int i = 0;
 
 	while (i < nb_sticks) {
-		map->line[index_line - 1].last_stick[0] = ' ';
-		map->line[index_line - 1].last_stick -= 1;
+		map->line[index_line].last_stick[0] = ' ';
+		map->line[index_line].last_stick -= 1;
 		i++;
 	}
 	map->nb_sticks -= nb_sticks;
-	map->line[index_line - 1].nb_sticks -= nb_sticks;
+	map->line[index_line].nb_sticks -= nb_sticks;
 	return (0);
 }

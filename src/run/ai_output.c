@@ -18,8 +18,8 @@ int ai_output(map_t *map)
 		line = next_valid_line(map, 0);
 		sticks = 1;
 	}
-	print_ai_info(sticks, line + 1);
-	remove_sticks(map, sticks, line + 1);
+	print_ai_info(sticks, line);
+	remove_sticks(map, sticks, line);
 	return (0);
 }
 
