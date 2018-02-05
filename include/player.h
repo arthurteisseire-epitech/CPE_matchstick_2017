@@ -5,7 +5,6 @@
 ** by Arthur Teisseire
 */
 
-
 #ifndef PLAYER_H
 #define PLAYER_H
 
