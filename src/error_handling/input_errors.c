@@ -35,11 +35,11 @@ int stick_errors(map_t *map, char *input)
 int line_errors(map_t *map, char *input)
 {
 	map->line_in = my_atoi(input);
-	if (!my_str_isnum(input) || map->line_in <= 0) {
+	if (!my_str_isnum(input)) {
 		my_putstr("Error: invalid input (positive number expected)\n");
 		return (-1);
 	}
-	if (map->line_in > map->nb_row) {
+	if (map->line_in > map->nb_row || map->line_in == 0) {
 		my_putstr("Error: this line is out of range\n");
 		return (-1);
 	}
