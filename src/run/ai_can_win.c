@@ -39,7 +39,8 @@ int set_for_last_line(map_t *map, int *line, int *sticks, int nb_valid)
 {
 	int f_valid = next_valid_line(map, 0);
 
-	if (nb_valid == 1 && map->line[f_valid].nb_sticks <= map->max_sticks + 1) {
+	if (nb_valid == 1 && 
+	map->line[f_valid].nb_sticks <= map->max_sticks + 1) {
 		*line = f_valid;
 		if (map->line[*line].nb_sticks == 1)
 			*sticks = 1;
