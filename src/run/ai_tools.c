@@ -36,11 +36,10 @@ int all_empty_except_one(map_t *map)
 	int line = 0;
 
 	while ((line = next_valid_line(map, line)) != -1) {
-		if (map->line[line].nb_sticks > 1) {
-			if (sticky_line != -1)
-				return (-1);
+		if (map->line[line].nb_sticks > 1 && sticky_line != -1)
+			return (-1);
+		else if (map->line[line].nb_sticks > 1)
 			sticky_line = line;
-		}
 		line++;
 	}
 	return (sticky_line);
